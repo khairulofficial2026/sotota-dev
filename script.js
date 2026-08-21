@@ -40,7 +40,7 @@ const adminPrintBtn    = document.getElementById("adminPrintBtn");
 const adminStatusMsg   = document.getElementById("adminStatusMsg");
 const adminPrintArea   = document.getElementById("adminPrintArea");
 
-const BN_DIGITS = ["०","१","२","३","४","५","६","७","८","९"];
+const BN_DIGITS = ["০","১","২","৩","৪","৫","৬","৭","৮","৯"];
 const BN_MONTHS = ["জানুয়ারি","ফেব্রুয়ারি","মার্চ","এপ্রিল","মে","জুন","জুলাই","আগস্ট","সেপ্টেম্বর","অক্টোবর","নভেম্বর","ডিসেম্বর"];
 
 // ফন্ট ম্যাপিং - বাংলা সংখ্যার জন্য কাস্টম ফন্ট
