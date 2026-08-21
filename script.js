@@ -40,11 +40,21 @@ const adminPrintBtn    = document.getElementById("adminPrintBtn");
 const adminStatusMsg   = document.getElementById("adminStatusMsg");
 const adminPrintArea   = document.getElementById("adminPrintArea");
 
-const BN_DIGITS = ["০","১","২","৩","৪","৫","৬","৭","৮","৯"];
+const BN_DIGITS = ["०","१","२","३","४","५","६","७","८","९"];
 const BN_MONTHS = ["জানুয়ারি","ফেব্রুয়ারি","মার্চ","এপ্রিল","মে","জুন","জুলাই","আগস্ট","সেপ্টেম্বর","অক্টোবর","নভেম্বর","ডিসেম্বর"];
 
+// ফন্ট ম্যাপিং - বাংলা সংখ্যার জন্য কাস্টম ফন্ট
+const FONT_CLASS_MAP = {
+  "tiro-bangla": "tiro-bangla-font",
+  "hind-siliguri": "hind-siliguri-font",
+  "baloo-da-2": "baloo-da-2-font",
+  "default": "tiro-bangla-font"
+};
+
 function toBnDigits(str){
-  return String(str).replace(/[0-9]/g, d => BN_DIGITS[d]);
+  const fontClass = FONT_CLASS_MAP[typeof BENGALI_NUMBER_FONT !== 'undefined' ? BENGALI_NUMBER_FONT : 'tiro-bangla'] || FONT_CLASS_MAP["default"];
+  const bnStr = String(str).replace(/[0-9]/g, d => BN_DIGITS[d]);
+  return `<span class="bn-number ${fontClass}">${bnStr}</span>`;
 }
 
 function norm(key){
