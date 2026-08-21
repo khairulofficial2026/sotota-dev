@@ -325,26 +325,10 @@ select.input{
   border-top:1px solid var(--line);padding-top:5px;margin-top:8px;
 }
 
-/* Tiro Bangla font for Bangla text in result card */
-.report-inner {
+/* Bengali Number Font Customization */
+/* এই ক্লাস গুলোতে শুধু বাংলা সংখ্যা (০,১,২,৩...) এর জন্য কাস্টম ফন্ট */
+.bn-number {
   font-family: 'Tiro Bangla', serif;
-}
-
-.report-inner .section-title,
-.report-inner .info-label,
-.report-inner .info-value,
-.report-inner .marks-table td,
-.report-inner .marks-table th,
-.report-inner .remarks-box,
-.report-inner .sign-row,
-.report-inner .report-footer,
-.report-inner .grade-scale {
-  font-family: 'Tiro Bangla', serif;
-}
-
-/* Keep heading in Baloo Da 2 */
-.report-inner .report-header h2 {
-  font-family: 'Baloo Da 2', sans-serif;
 }
 
 /* ডাউনলোড/প্রিন্ট বাটন */
@@ -455,4 +439,36 @@ select.input{
 @media print{
   .print-page{page-break-after:always;}
   .print-page:last-child{page-break-after:auto;}
+}
+
+/* রেজাল্ট কার্ডের সব বাংলা টেক্সট Hind Siliguri এ */
+.report-inner {
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+/* Bengali Number Font Customization */
+/* শুধু বাংলা সংখ্যা (०,१,२,३...) এর জন্য কাস্টম ফন্ট */
+.bn-number {
+  font-family: 'Tiro Bangla', serif;
+}
+
+/* বাংলা সংখ্যার বিভিন্ন ফন্ট অপশন */
+.bn-number.tiro-bangla-font {
+  font-family: 'Tiro Bangla', serif;
+  font-weight: 400;
+}
+
+.bn-number.hind-siliguri-font {
+  font-family: 'Hind Siliguri', sans-serif;
+  font-weight: 600;
+}
+
+.bn-number.baloo-da-2-font {
+  font-family: 'Baloo Da 2', sans-serif;
+  font-weight: 700;
+}
+
+/* কাস্টম ফন্টের জন্য স্পেস (যদি ইউজ করতে চাও) */
+.bn-number.custom-font {
+  font-family: 'Custom Bangla Font', serif;
 }
