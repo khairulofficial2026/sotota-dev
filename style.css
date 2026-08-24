@@ -367,7 +367,18 @@ select.input{
   .sign-row{page-break-inside:avoid;break-inside:avoid;}
   .card{box-shadow:none;}
 }
-
+ /* এই অংশটি যোগ করুন */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+  
+  /* মেরিট বিশেষভাবে নীল রাখতে */
+  .info-value.merit {
+    color: #0d0661 !important;
+  }
+}
 .footer{text-align:center;padding:20px;font-size:.78rem;color:var(--muted);}
 
 @media (max-width:600px){
